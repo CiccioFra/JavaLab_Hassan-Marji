@@ -23,9 +23,9 @@ public class Es2_For {
 
             somma += primoNumero + secondoNumero;
 
-            System.out.println("iterazione nr. " + i+1 +
+            System.out.println("iterazione nr. " + (i+1) +
                     " primoNumero: " + primoNumero + " secondoNumero: " + secondoNumero +
-                    "\nLa loro somma è: " + somma);
+                    "\nLa loro somma é: " + somma + "\n");
         }
     }
 }

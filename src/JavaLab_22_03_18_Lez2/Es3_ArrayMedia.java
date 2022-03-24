@@ -17,7 +17,9 @@ public class Es3_ArrayMedia {
 
         System.out.println("Il tuo Array contiene:");
         for (int j : parFormaleArray) {
-            System.out.println(j);
+            System.out.print(j);
+            if (j < parFormaleArray.length)
+            System.out.print(" - ");
             somma += j;
         }
         return somma / parFormaleArray.length;
@@ -42,7 +44,7 @@ public class Es3_ArrayMedia {
 
         double media = mediaArray(array);
 
-        System.out.println("La media dei numeri da te inseriti è " + media);
+        System.out.println("\nLa media dei numeri da te inseriti è " + media);
     }
 
 

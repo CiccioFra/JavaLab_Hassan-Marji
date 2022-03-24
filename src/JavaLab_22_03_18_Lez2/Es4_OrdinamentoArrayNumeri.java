@@ -1,6 +1,6 @@
 package JavaLab_22_03_18_Lez2;
 
-public class Es4_OrdinamentoArray {
+public class Es4_OrdinamentoArrayNumeri {
     public static void main(String[] args) {
         int[] arrDaOrdinare = {22, 15, 37, 26, 9, 55, 4};
 
@@ -15,7 +15,7 @@ public class Es4_OrdinamentoArray {
                 }
             }
         }
-        for (int a:  arrDaOrdinare) {
+        for (int a: arrDaOrdinare) {
             System.out.println(a);
         }
     }
