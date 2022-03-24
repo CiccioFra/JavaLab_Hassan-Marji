@@ -1,0 +1,5 @@
+In una funzione i parametri si suddividono in
+- Parametri Formali:
+    Sono i Parametri dichiarati nella firma di un Metodo, ovvero nella sua dichiarazione
+- Parametri Attuali:
+    Sono i Parametri passati con i valori veri e propri (quando richiamiamo il Metodo)
