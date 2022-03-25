@@ -1,4 +1,6 @@
-package JavaLab_22_03_25_Lez3.es2;
+package JavaLab_22_03_25_Lez3.es2_Banca;
+
+import JavaLab_22_03_25_Lez3.es2_Banca.exception.SaldoNonDisponibileException;
 
 /**
  * @author Fracnesco
@@ -59,12 +61,24 @@ public class ContoCorrente {
      */
     public double prelievo(double sommaPrelevare) {
         // controllo che il saldo disponibile sia magiore o ubuale alla somma da prelevare
-        if (this.saldo >= sommaPrelevare) {
+        try {
+            if(this.saldo < sommaPrelevare)
+                throw new SaldoNonDisponibileException();
+
             this.saldo -= sommaPrelevare;
             return sommaPrelevare;
         }
-        System.out.println("Sei povero, non puoi prelevare più di quanto hai..");
-        return Double.NEGATIVE_INFINITY;    //va bene solo con double
+        catch (SaldoNonDisponibileException ex) {    //cosa dobbiamo catturare
+            System.out.println(ex.getMessage());
+        }
+
+//        if (this.saldo >= sommaPrelevare) {
+//            this.saldo -= sommaPrelevare;
+//            return sommaPrelevare;
+//        }
+//        System.out.println("Sei povero, non puoi prelevare più di quanto hai..");
+//        return Double.NEGATIVE_INFINITY;    //va bene solo con double
+        return 0;
     }
 
     /**

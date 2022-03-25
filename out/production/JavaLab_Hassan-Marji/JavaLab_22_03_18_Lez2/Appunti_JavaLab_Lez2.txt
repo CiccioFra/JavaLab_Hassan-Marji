@@ -1,0 +1,9 @@
+Esercizi su cicli e array
+
+-- array è una struttura dati primitiva omogenea, ma vista come oggetto (contiene valori/oggetti omogenei).
+    (salvata nello heap)
+    - è una struttura dati statica, pur essendo allocato in memoria dinamica.
+
+-- ordinare un array
+//    paradigma del divide et impera
+// ordinamento con metodo insertion

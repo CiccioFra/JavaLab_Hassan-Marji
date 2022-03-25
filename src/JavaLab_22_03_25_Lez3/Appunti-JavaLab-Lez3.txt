@@ -29,3 +29,5 @@ Metodo toString() -> ritorna una stringa che rappresenta un oggetto
 
 
 su drow.io
+
+parametri formali / parametri attuali
