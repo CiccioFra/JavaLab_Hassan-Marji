@@ -1,4 +1,4 @@
-package JavaLab_22_03_11_Lez1.dalDocente;
+package JavaLab_22_03_11_Lez1.Docente;
 
 import java.util.Scanner;
 

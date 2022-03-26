@@ -1,15 +1,18 @@
-package JavaLab_22_03_25_Lez3.es1;
+package JavaLab_22_03_25_Lez3.es1_Persona;
 
 public class PersonaPrivate {
 
+    // variabili di ISTANZA
     private String nome;
     private String cognome;
     private String coloreCapelli;
     private Integer eta;
 
+    // variabile di CLASSE con "static"
+    // è vista contestualmente da tutti i metodi/oggetti a crearsi
     public static int nrPersoneCreate = 0;
 
-    // dichiarazione dei costruttori
+    // dichiarazione dei COSTRUTTORI
     public PersonaPrivate() {
 
     }
