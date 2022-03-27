@@ -17,7 +17,6 @@ public class ContoCorrente {
 
     /**
      * Costrutore pieno che rappresenta la creazione del mio ogetto c/c
-     *
      * @param titolare Titolare del conto corrente
      * @param iban     numero iban che rappresenta in modo univoco il numero del c/c
      * @param saldo    saldo attuale del mio c/c

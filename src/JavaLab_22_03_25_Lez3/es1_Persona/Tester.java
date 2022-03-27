@@ -18,6 +18,4 @@ public class Tester {
         //PersonaPrivate ciccio = new PersonaPrivate();
         //ciccio.nome = "Ciccio";
     }
-
-
 }
