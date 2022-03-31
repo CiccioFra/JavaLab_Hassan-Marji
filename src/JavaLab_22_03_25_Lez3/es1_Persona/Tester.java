@@ -9,13 +9,12 @@ public class Tester {
         System.out.println();
 
         Persona ciccioIngrassia = new Persona("Ciccio", "Ingrassia");
+        ciccioIngrassia.coloreCapelli = "Verdi";
         System.out.println(ciccioIngrassia);
 
         Persona francoFranchi = new Persona("Franco", "Franchi");
+        francoFranchi.eta = 55;
         System.out.println(francoFranchi);
 
-        // caso di variabili dichiarate pubbliche nella Classe del costruttore
-        //PersonaPrivate ciccio = new PersonaPrivate();
-        //ciccio.nome = "Ciccio";
     }
 }

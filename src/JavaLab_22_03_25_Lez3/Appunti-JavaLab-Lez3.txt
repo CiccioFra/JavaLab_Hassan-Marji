@@ -24,9 +24,6 @@ Metodo toString() -> ritorna una stringa che rappresenta un oggetto
         -   public: l'accesso al metodo/variabile
         -   private: l'accesso al mio metodo/variabile sarà LOCALE
 
-    -   è buona norma dichiarare le nostre
-
-
 
 su drow.io
 

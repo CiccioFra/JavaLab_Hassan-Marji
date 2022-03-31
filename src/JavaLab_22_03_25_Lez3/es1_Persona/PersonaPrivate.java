@@ -1,5 +1,10 @@
 package JavaLab_22_03_25_Lez3.es1_Persona;
 
+/**
+ * @author Francesco
+ * Esempio che andrà a descrivere come creare una classe,
+ * andando in seguito, ad istanziare l'oggetto della stessa.
+ * */
 public class PersonaPrivate {
 
     // variabili di ISTANZA
@@ -26,6 +31,14 @@ public class PersonaPrivate {
     public PersonaPrivate(String nome, String cognome, Integer eta) {
         this.nome = nome;
         this.cognome = cognome;
+        this.eta = eta;
+        nrPersoneCreate++;
+    }
+
+    public PersonaPrivate(String nome, String cognome, String coloreCapelli, Integer eta) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.coloreCapelli = coloreCapelli;
         this.eta = eta;
         nrPersoneCreate++;
     }

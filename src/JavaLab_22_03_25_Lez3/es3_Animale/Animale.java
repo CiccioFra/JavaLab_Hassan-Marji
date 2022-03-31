@@ -1,4 +1,4 @@
-package JavaLab_22_03_25_Lez3.esAnimale;
+package JavaLab_22_03_25_Lez3.es3_Animale;
 
 /**
  * @author Francesco
