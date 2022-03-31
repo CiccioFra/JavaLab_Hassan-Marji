@@ -1,35 +1,23 @@
-UML Animale
+UML PersonaPrivate
     --------VARIABILI--------
-    -   tipoAnimale (String)
-    -   ambiente    (String)
-    -   tipoPelo    (String)
-    -   nrZampe     (int)
-    -   altezza     (int)
-    -   peso        (int)
-    -   domestico   (boolean)
+    -   nome            (String)    tipo private;
+    -   cognome         (String)    tipo private;
+    -   coloreCapelli   (String)    tipo private;
+    -   eta             (Integer)   tipo private;
     ----------METODI----------
-    -   getter()
-    -   setter()
-    -   toString()
-    -   mangia()    ->
-    -   cammina()   ->
-    -   corre()     ->
-    -   dorme()     ->
-    -   gioca()     ->
+    -   costruttore     vuoto
+    -   costruttore     con attributi
+    -   getter()        per ogni proprietà
+    -   setter()        per ogni proprietà
+    -   toString()      @Override
 
-UML Habitat
+
+UML TesterPersPrivate
     --------VARIABILI--------
-    -   ambiente    (String)
-    -   ________    (String)
-    -   ________    (int)
-    -   ________    (int)
-    -   ________    (boolean)
+    -   cico                (oggetto PersonaPrivate)
+    -   ciccioIngrassia     (oggetto PersonaPrivate)
+    -   francoFranchi       (oggetto PersonaPrivate)
     ----------METODI----------
-    -   getter()
-    -   setter()
-    -   toString()
-    -   ________()   ->
-    -   ________()   ->
-    -   ________()   ->
+    -   System.out.println()
 
 

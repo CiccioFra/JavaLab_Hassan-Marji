@@ -3,7 +3,7 @@ package JavaLab_22_03_25_Lez3.es2_Banca;
 import JavaLab_22_03_25_Lez3.es2_Banca.exception.SaldoNonDisponibileException;
 
 /**
- * @author Fracnesco
+ * @author Fracnesco Ribatti
  * Questa classe andrà a rappresententare gli stati ed i comportamenti di un conto corrente studiato ed analizzato
  */
 public class ContoCorrente {

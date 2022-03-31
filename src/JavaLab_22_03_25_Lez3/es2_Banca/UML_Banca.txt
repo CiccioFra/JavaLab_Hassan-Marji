@@ -1,0 +1,31 @@
+UML ContoCorrente   classe da itanziare
+    --------VARIABILI--------
+    -   titolare    (String)
+    -   iban        (String)
+    -   saldo       (Integer)    tipo private;
+    ----------METODI----------
+    -   costruttore     vuoto
+    -   costruttore     con attributi
+    -   getter()        per ogni proprietà
+    -   setter()        per ogni proprietà
+    -   toString()      @Override
+
+
+UML aperturaConto
+    --------VARIABILI--------
+    -   movimento   (Integer)
+    ----------METODI----------
+    -   System.out.println()
+
+UML versamento
+    --------VARIABILI--------
+    -   movimento   (Integer)
+    ----------METODI----------
+    -   System.out.println()
+
+UML prelievo
+    --------VARIABILI--------
+    -   movimento   (Integer)
+    ----------METODI----------
+    -   System.out.println()
+
