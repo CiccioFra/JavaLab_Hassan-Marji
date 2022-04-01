@@ -22,7 +22,7 @@ Modificatori di accesso incontrati
             solo dalle classi interni al package
 
 domande:
--   modificatori di accesso di Classi
+-   modificatori di accesso di Classi   sempre public, se private (raro) è per poterle usare all'interno di altre Classi
 -   la classe estesa (non astratta) si chiama "base" come in C# ?
 -   cosa sono le SuperClassi? le classi estese.. specifiche?
 -   ho un pò di confusione nel confronto tra classi estese e classi importate

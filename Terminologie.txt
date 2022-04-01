@@ -1,5 +1,0 @@
- boilerplate (codice ripetuto / ridondanza di codice)
-
-metodo statico  /   metodo di istanza
-
-equals()    confronta due oggetti e dice se sono uguali a livello di attributo

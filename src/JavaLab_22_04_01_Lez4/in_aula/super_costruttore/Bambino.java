@@ -44,6 +44,6 @@ public class Bambino extends Persona{
     }
 
 
-    //metodo statico che stampa le funzionalità dellì'oggetto
-    //i metodi statici non possono lavorare con i metodi di istanza
+    //metodo statico che stampa le funzionalità dell'oggetto
+    //i metodi statici non possono lavorare con i metodi d'istanza
 }

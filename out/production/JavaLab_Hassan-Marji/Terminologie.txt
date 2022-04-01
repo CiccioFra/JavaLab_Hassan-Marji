@@ -1,0 +1,14 @@
+ boilerplate (codice ripetuto / ridondanza di codice)
+
+metodo statico  /   metodo di istanza
+
+equals()    confronta due oggetti e dice se sono uguali a livello di attributo
+
+metodi statici:
+    - non possono lavorare con variabili d'istanza
+
+    // variabili di ISTANZA
+    private String nome;        ((classica))
+
+    // variabile di CLASSE con "static"    // è vista contestualmente da tutti i metodi/oggetti a crearsi
+    public static int nrPersoneCreate = 0;
