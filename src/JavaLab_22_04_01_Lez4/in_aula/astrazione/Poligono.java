@@ -3,7 +3,7 @@ package JavaLab_22_04_01_Lez4.in_aula.astrazione;
 /**
  * classe astratta che andrà a nascondere i miei dettagli implementativi
  * per classi specializzate (Triangolo, Quadrato, ecc..)
- * Quindi ci dità cosa faccio, non come
+ * Quindi ci dirà cosa faccio, non come
  * @author Francesco
  */
 public abstract class Poligono implements MisurePoligono{

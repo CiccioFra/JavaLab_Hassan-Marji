@@ -3,6 +3,7 @@
 metodo statico  /   metodo di istanza
 
 equals()    confronta due oggetti e dice se sono uguali a livello di attributo
+    oggetto1.equals(oggetto2);
 
 metodi statici:
     - non possono lavorare con variabili d'istanza
@@ -12,3 +13,18 @@ metodi statici:
 
     // variabile di CLASSE con "static"    // è vista contestualmente da tutti i metodi/oggetti a crearsi
     public static int nrPersoneCreate = 0;
+
+super
+    public Bambino(String nome, String cognome, double pesoNascita, boolean prematuro){
+        super(nome, cognome);   // richiama il costruttore della SuperClasse
+        // evito ridondanza  // evito boilerplate (codice ripetuto)
+        // sostituisce il "this.attr = attr" della SuperClasse
+        this.pesoNascita = pesoNascita;
+        this.prematuro = prematuro;
+    }
+
+// il metodo toString() è definito nella Classe Object,
+// permette l'output in testo, è implicito il suo richiamo (es in print();)
+// l'overload per far credere al sistema di eseguire il metodo "nativo", invece si trova il nostro..
+
+

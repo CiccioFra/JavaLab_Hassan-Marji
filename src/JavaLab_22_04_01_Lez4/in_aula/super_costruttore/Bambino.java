@@ -1,6 +1,7 @@
 package JavaLab_22_04_01_Lez4.in_aula.super_costruttore;
 
 public class Bambino extends Persona{
+    // variabili d'istanza
     private double pesoNascita;
     private boolean prematuro;
 
