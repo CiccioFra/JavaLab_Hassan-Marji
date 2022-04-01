@@ -11,11 +11,12 @@ public class Studente extends Persona {
     private Integer giorniFrequentati;
     private Integer nrCompitiAssegnati;
     private Integer nrCompitiSvolti;
+    private Integer nrStudente; // gli sarà assegnata la variabile static nrStudenti per conteggiare gli studenti creati
 
-    // variabile di CLASSE con "static"    // è vista contestualmente da tutti i metodi/oggetti a crearsi
+    // variabili di CLASSE con "static" visibili da tutta la classe
     private static final int GIORNI_DI_SCUOLA = 240;
-    private static final int GIORNI_ASSENZE_DA_SCUOLA = 50;
-    public static Integer nrStudenti = 0;
+    private static final int GIORNI_ASSENZE_AMMESSI = 50;
+    private static Integer nrStudenti = 0;  // sarà assegnata alla variabile nrStudente per conteggiare gli studenti creati
 
     /** Costruttore vuoto */
     public Studente() {
@@ -41,7 +42,7 @@ public class Studente extends Persona {
         this.giorniFrequentati = giorniFrequentati;
         this.nrCompitiAssegnati = nrCompitiAssegnati;
         this.nrCompitiSvolti = nrCompitiSvolti;
-        nrStudenti++;
+        nrStudente = nrStudenti++;
     }
 
     /**
@@ -53,12 +54,12 @@ public class Studente extends Persona {
      */
     public Studente(String nome, String cognome, int eta) {
         super(nome, cognome, eta);
-        nrStudenti++;
+        nrStudente = nrStudenti++;
     }
 
     /**
      * Costruttore PARZIALE dell'oggetto Studente
-     * per fare delle prove
+     * per fare delle PROVE!!!
      * @param nome           nome dello studente
      * @param sezione        sezione a cui è iscritto
      * @param annoScolastico anno scolastico
@@ -67,7 +68,7 @@ public class Studente extends Persona {
         super(nome, null, null);
         this.sezione = sezione;
         this.annoScolastico = annoScolastico;
-        nrStudenti++;
+        nrStudente = nrStudenti++;
     }
 
     /** getter e setter */
@@ -99,8 +100,8 @@ public class Studente extends Persona {
         return GIORNI_DI_SCUOLA;
     }
 
-    public int getGIORNI_ASSENZE_DA_SCUOLA() {
-        return GIORNI_ASSENZE_DA_SCUOLA;
+    public int getGIORNI_ASSENZE_AMMESSI() {
+        return GIORNI_ASSENZE_AMMESSI;
     }
 
     public Integer getNrCompitiAssegnati() {
@@ -127,7 +128,6 @@ public class Studente extends Persona {
         Studente.nrStudenti = nrStudenti;
     }
 
-
     @Override
     public String toString() {
         return "Studente{" +
@@ -139,7 +139,7 @@ public class Studente extends Persona {
                 ", giorniFrequentati=" + giorniFrequentati +
                 ", nrCompitiAssegnati=" + nrCompitiAssegnati +
                 ", nrCompitiSvolti=" + nrCompitiSvolti +
-                ", nr Studente=" + nrStudenti +
+                ", Studente nr=" + nrStudente +
                 '}';
     }
 
@@ -150,7 +150,7 @@ public class Studente extends Persona {
      */
     public boolean verificaPresenze(int ggFrequenza) {
         setGiorniFrequentati(ggFrequenza);
-        return GIORNI_DI_SCUOLA - getGiorniFrequentati() <= GIORNI_ASSENZE_DA_SCUOLA;
+        return GIORNI_DI_SCUOLA - getGiorniFrequentati() <= GIORNI_ASSENZE_AMMESSI;
     }
 
     public boolean svolgimentoCompiti(boolean svolgeCompiti) {

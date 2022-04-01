@@ -1,0 +1,1 @@
+Posso estendere una classe non appartenente al package?

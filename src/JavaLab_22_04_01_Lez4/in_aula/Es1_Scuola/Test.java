@@ -11,9 +11,13 @@ public class Test {
             System.out.println("Bocciato");
 
         System.out.println(gatto.getNome());
-        Studente ciccio = new Studente("ciccio", "verdi", 15, "polo","polo","polo","polo");
+        Studente ciccio = new Studente("ciccio", "verdi", 15, 's',12,2,5,8);
+        Studente gatto3 = new Studente("marco", "verdi", 15);
+        Studente gatto4 = new Studente("marco", "verdi", 15);
 
         System.out.println("new Studente()");
         System.out.println(ciccio);
+        System.out.println(gatto3);
+        System.out.println(gatto4);
     }
 }

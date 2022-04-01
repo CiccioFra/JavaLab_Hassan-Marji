@@ -7,8 +7,8 @@ public class VerificaPresenze extends Studente{
      * @param ggFrequenza  giorni di presenza a scuola dello studente
      * @return true se ha fatto poche assenze (forse promosso :)
      */
-//    public boolean verificaPresenze(int ggFrequenza) {
-//        setGiorniFrequentati(ggFrequenza);
-//        return getGiorniFrequentati() % getGIORNI_DI_SCUOLA() >= 0.7;
-//    }
+    public boolean verificaPresenze(int ggFrequenza) {
+        setGiorniFrequentati(ggFrequenza);
+        return getGiorniFrequentati() % getGIORNI_DI_SCUOLA() >= 0.7;
+    }
 }
