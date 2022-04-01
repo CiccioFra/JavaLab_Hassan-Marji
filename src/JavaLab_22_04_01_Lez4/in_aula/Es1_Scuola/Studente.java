@@ -9,12 +9,13 @@ public class Studente extends Persona {
     private Character sezione;
     private Integer annoScolastico;
     private Integer giorniFrequentati;
-    private final int GIORNI_DI_SCUOLA = 240;
     private Integer nrCompitiAssegnati;
     private Integer nrCompitiSvolti;
 
     // variabile di CLASSE con "static"    // è vista contestualmente da tutti i metodi/oggetti a crearsi
-    public static Integer ntStudenti = 0;
+    private static final int GIORNI_DI_SCUOLA = 240;
+    private static final int GIORNI_ASSENZE_DA_SCUOLA = 50;
+    public static Integer nrStudenti = 0;
 
     /** Costruttore vuoto */
     public Studente() {
@@ -40,7 +41,7 @@ public class Studente extends Persona {
         this.giorniFrequentati = giorniFrequentati;
         this.nrCompitiAssegnati = nrCompitiAssegnati;
         this.nrCompitiSvolti = nrCompitiSvolti;
-        ntStudenti++;
+        nrStudenti++;
     }
 
     /**
@@ -52,7 +53,7 @@ public class Studente extends Persona {
      */
     public Studente(String nome, String cognome, int eta) {
         super(nome, cognome, eta);
-        ntStudenti++;
+        nrStudenti++;
     }
 
     /**
@@ -66,9 +67,10 @@ public class Studente extends Persona {
         super(nome, null, null);
         this.sezione = sezione;
         this.annoScolastico = annoScolastico;
-        ntStudenti++;
+        nrStudenti++;
     }
 
+    /** getter e setter */
     public Character getSezione() {
         return sezione;
     }
@@ -97,6 +99,10 @@ public class Studente extends Persona {
         return GIORNI_DI_SCUOLA;
     }
 
+    public int getGIORNI_ASSENZE_DA_SCUOLA() {
+        return GIORNI_ASSENZE_DA_SCUOLA;
+    }
+
     public Integer getNrCompitiAssegnati() {
         return nrCompitiAssegnati;
     }
@@ -113,39 +119,41 @@ public class Studente extends Persona {
         this.nrCompitiSvolti = nrCompitiSvolti;
     }
 
-    public static Integer getNtStudenti() {
-        return ntStudenti;
+    public static Integer getNrStudenti() {
+        return nrStudenti;
     }
 
-    public static void setNtStudenti(Integer ntStudenti) {
-        Studente.ntStudenti = ntStudenti;
+    public static void setNrStudenti(Integer nrStudenti) {
+        Studente.nrStudenti = nrStudenti;
     }
-
-    /** getter e setter */
 
 
     @Override
     public String toString() {
         return "Studente{" +
-                "sezione=" + sezione +
+                "nome='" + getNome() + '\'' +
+                ", cognome='" + getCognome() + '\'' +
+                ", eta=" + getEta() +
+                ", sezione=" + sezione +
                 ", annoScolastico=" + annoScolastico +
-                ", GIORNI_DI_SCUOLA=" + GIORNI_DI_SCUOLA +
+                ", giorniFrequentati=" + giorniFrequentati +
                 ", nrCompitiAssegnati=" + nrCompitiAssegnati +
                 ", nrCompitiSvolti=" + nrCompitiSvolti +
+                ", nr Studente=" + nrStudenti +
                 '}';
     }
 
     /**
      * metodo che verifica il numero dei giorni di assenza dello studente
-     * @param giorniFrequentati  assenze dello studente
-     * @param studente oggetto studente
+     * @param ggFrequenza  giorni di presenza a scuola dello studente
      * @return true se ha fatto poche assenze (forse promosso :)
      */
-    public static boolean verificaAssenze(Studente studente, int giorniFrequentati) {
-        return giorniFrequentati / GIORNI_DI_SCUOLA  <= 0.7;
+    public boolean verificaPresenze(int ggFrequenza) {
+        setGiorniFrequentati(ggFrequenza);
+        return GIORNI_DI_SCUOLA - getGiorniFrequentati() <= GIORNI_ASSENZE_DA_SCUOLA;
     }
 
-    public static boolean svolgimentoCompiti(boolean svolgeCompiti) {
+    public boolean svolgimentoCompiti(boolean svolgeCompiti) {
         return true;
     }
 }

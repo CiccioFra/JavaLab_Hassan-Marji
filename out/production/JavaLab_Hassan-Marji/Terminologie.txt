@@ -3,6 +3,7 @@
 metodo statico  /   metodo di istanza
 
 equals()    confronta due oggetti e dice se sono uguali a livello di attributo
+    oggetto1.equals(oggetto2);
 
 metodi statici:
     - non possono lavorare con variabili d'istanza
@@ -12,3 +13,78 @@ metodi statici:
 
     // variabile di CLASSE con "static"    // è vista contestualmente da tutti i metodi/oggetti a crearsi
     public static int nrPersoneCreate = 0;
+
+super
+    public Bambino(String nome, String cognome, double pesoNascita, boolean prematuro){
+        super(nome, cognome);   // richiama il costruttore della SuperClasse
+        // evito ridondanza  // evito boilerplate (codice ripetuto)
+        // sostituisce il "this.attr = attr" della SuperClasse
+        this.pesoNascita = pesoNascita;
+        this.prematuro = prematuro;
+    }
+
+// il metodo toString() è definito nella Classe Object,
+// permette l'output in testo, è implicito il suo richiamo (es in print();)
+// l'overload per far credere al sistema di eseguire il metodo "nativo", invece si trova il nostro..
+
+Il costruttore è quel metodo di una classe il cui compito è proprio quello di creare nuove
+istanze, oltre ad essere il punto del programma in cui un nuovo elemento (quindi una nuova
+identità) viene creato ed è reso disponibile per l’interazione con il resto del sistema.
+
+A seconda dei diversi modificatori utilizzati, del corpo della classe specificato e delle parole chiave utilizzate, abbiamo vari tipi di classi in Java.
+
+Classe concrete: Una classe normale che ha l'implementazione concreta di metodi.
+Classe POJO: Questo è 'Plain Old Java Object' contenente solo variabili membro private
+    e metodi getter setter per accedere a queste variabili.
+Classe astratta: Questa classe ha uno o più metodi astratti.
+Classe final: Una classe finale non può essere ereditata, è una sorta di costante
+    e diventa immutabile.
+Classe statica: Una classe contenente solo membri statici.
+    Una statica in Java in generale indica l'oggetto che appartiene a una classe
+    e non alle singole istanze. Quindi non è necessario accedere a un membro
+    o metodo statico in Java con un oggetto ma utilizzando direttamente un nome di classe.
+    Una classe statica in Java può contenere solo membri statici. Inoltre,
+    non possiamo creare un'istanza di una classe statica.
+Classe annidata o interna: è una classe che è un membro di un'altra classe,
+    viene utilizzata per migliorare l'incapsulamento.
+Classe anonima: Una classe senza nome.
+Classe immutabile: Una classe il cui oggetto non può essere modificato (genera oggetti
+    immutabili, cioè che non possono essere modificati una volta creati).
+    Tutte le classi wrapper in Java per i tipi primitivi (Integer, Boolean, Byte, ecc.)
+    sono immutabili. Anche la classe String è immutabile.
+    Affinché una classe sia immutabile, deve essere dichiarata final insieme a tutti
+    i suoi membri dati. Inoltre, la classe deve avere un costruttore parametrizzato.
+    Tutte le variabili membro devono avere un metodo getter ma non un metodo setter.
+    Tutti i requisiti di cui sopra devono essere soddisfatti affinché una classe sia immutabile.
+Classe oggetto: La classe base di tutte le funzionalità Java.
+    è la classe genitore o la prima classe in Java. Si trova al livello più alto della gerarchia Java.
+    Poiché tutte le classi hanno la classe Object come superclasse, tutti gli oggetti Java
+    inclusi gli Arrays implementano i metodi della classe Object. La classe oggetto
+    è presente nel pacchetto 'java.lang'.
+    La tabella seguente descrive i costruttori e i metodi della classe Object.
+        -   Costruttore / Metodo	-   Descrizione
+        Classe getClass ()	Restituisce la classe di runtime dell'oggetto.
+        -   Costruttore di classi di oggetti
+        Oggetto()	Costruttore di classi di oggetti
+        -   Metodi della classe di oggetti
+        oggetto protetto clone ()	Restituisce un clone o una copia dell'oggetto.
+        booleano è uguale a (Object obj)	Controlla se un dato oggetto obj è uguale a questo oggetto.
+        protetto void finalize ()	Chiamato dal Garbage Collector quando tutti i riferimenti all'oggetto vengono eliminati.
+        int hashCode()	Restituisce il codice hash per l'oggetto.
+        void notify ()	Utilizzare per riattivare un singolo thread in attesa.
+        void notifyAll ()	Riattiva tutti i thread in attesa.
+        String toString ()	Restituisce l'equivalente String dell'oggetto.
+        void wait ()	Fa in modo che un thread attenda fino a quando non viene svegliato dal metodo di notifica da un altro thread.
+        void wait (timeout lungo)	Fa in modo che il thread attenda fino allo scadere del tempo fornito da 'timeout' o fino a quando non viene riattivato dai metodi notify o notifyAll.
+        void wait (timeout lungo, int nanos)	Fa in modo che il thread attenda fino allo scadere del tempo specificato o fino a quando notify () o notifyAll () vengono richiamati da un altro thread.
+Classe wrapper: Ogni tipo di dati primitivo in Java ha una classe wrapper.
+
+Pattern Singleton: consente una singola istanza alla volta.
+    Si noti che la fine del ciclo di vita dell'applicazione non distrugge una classe
+    singleton come le classi normali. Quando una classe viene dichiarata singleton,
+    non creiamo una nuova istanza ogni volta che viene effettuata una nuova richiesta
+    per l'oggetto.
+    La stessa istanza viene utilizzata più volte. In questo modo possiamo risparmiare
+    lo spazio di memoria principalmente in caso di applicazioni multi-thread e database.
+    Possiamo usare una classe singleton per attività come la memorizzazione nella cache,
+    la registrazione, ecc.
