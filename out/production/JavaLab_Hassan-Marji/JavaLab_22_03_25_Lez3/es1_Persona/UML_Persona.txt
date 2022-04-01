@@ -1,0 +1,23 @@
+UML PersonaPrivate
+    --------VARIABILI--------
+    -   nome            (String)    tipo private;
+    -   cognome         (String)    tipo private;
+    -   coloreCapelli   (String)    tipo private;
+    -   eta             (Integer)   tipo private;
+    ----------METODI----------
+    -   costruttore     vuoto
+    -   costruttore     con attributi
+    -   getter()        per ogni proprietà
+    -   setter()        per ogni proprietà
+    -   toString()      @Override
+
+
+UML TesterPersPrivate
+    --------VARIABILI--------
+    -   cico                (oggetto PersonaPrivate)
+    -   ciccioIngrassia     (oggetto PersonaPrivate)
+    -   francoFranchi       (oggetto PersonaPrivate)
+    ----------METODI----------
+    -   System.out.println()
+
+

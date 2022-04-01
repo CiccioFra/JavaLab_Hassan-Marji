@@ -1,0 +1,5 @@
+Ereditarietà:   Superclasse (classe padre)  ->  Sottoclasse (classe Figlia)
+                    Sottoclasse extends Superclasse
+
+metodo speciale che richiama il metodo costruttore del padre
+super

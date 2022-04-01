@@ -1,0 +1,6 @@
+Ereditarietà:   Superclasse (classe padre)  ->  Sottoclasse (classe Figlia)
+                    Sottoclasse extends Superclasse
+
+super   metodo speciale che richiama il metodo costruttore del padre
+
+List<String> stringList = new ArrayList<>();    // questo è polimorfismo

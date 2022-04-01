@@ -1,0 +1,30 @@
+polimorfismo - un oggetto riesce ad adattarsi
+incapsulamento - (quando si settano a private le variabili - uso get set)
+astrazione - nascondere i dettagli implementativi
+istanziamento -
+ereditarietà - attributi che si ereditano a classe figlie
+
+gli oggetti hanno stati e comportamenti
+template che andrà a descrivere stati e comportamenti
+
+la classe definisce l'oggetto
+come dichiarare l'oggetto che rappresenta l'istanza riferita alla classe: con i costruttori
+
+
+Metodo toString() -> ritorna una stringa che rappresenta un oggetto
+        (equals() -> )
+
+** Singleton
+
+/** Access Modifiers - modificatori d'accesso */
+    -   Servono per definire il tipo di accesso che darò ai miei attributi
+    -   Questo tipo d'accesso viene dichiarato come prima cosa all'interno della firma/dichiarazione
+
+    -   I modificatori d'accesso sono:
+        -   public: l'accesso al metodo/variabile
+        -   private: l'accesso al mio metodo/variabile sarà LOCALE
+
+
+su drow.io
+
+parametri formali / parametri attuali
