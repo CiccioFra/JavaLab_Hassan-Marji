@@ -1,4 +1,20 @@
- boilerplate (codice ripetuto / ridondanza di codice)
+boilerplate (codice ripetuto / ridondanza di codice)
+Relazione di composizione (tra Classi): quando per definire una classe, introduciamo nel suo stato interno
+    oggetti che sono appartenenti ad altre classi (una classe è fatta con oggetti appartenenti ad altre classi)
+    è uno dei meccanismi attraverso i quali la OOP espleca la sua massima potenza
+
+Garbage Collector: gestisce quelle operazioni necessarie a rilasciare le risorse occupate durante la vita dell'oggetto,
+    ed anche operazioni che dovessero essere ritenute importanti alla morte di un oggetto, tra cui:
+    molte delle operazioni legate alla locazione nella RAM (de-allocare dalla RAM lo spazio occupato),
+    Andare a scrivere delle informazioni su un file, chiudere file aperti, chiudere connessioni su internet, far scattare altre operazioni..
+    - Alcuni linguaggi, come il c++, hanno il concetto simmetrico a quello di costruttore:
+        quello di distruttore vero e proprio, come metodo da implementare a cura del programmatore
+        - Java non prevede questo, per cui se è importante alla fine dell'utilizzo di un oggetto rilasciare delle risorse,
+            è meglio prevedere un metodo esplicito, ovvero aver cura di ricordarci di richiamare
+
+private Oggetto ogg = null;  -> così sono references nulli (poi viene il new Oggetto(parametri) )
+
+late binding  - conformità di tipo l15 0'40"
 
 metodo statico  /   metodo di istanza
 

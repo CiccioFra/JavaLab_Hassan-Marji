@@ -1,4 +1,4 @@
-package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola;
+package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola_v2;
 
 /**
  * @author Francesco
@@ -6,7 +6,7 @@ package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola;
  */
 public class Studente extends Persona {
     // variabili di ISTANZA
-    private Character sezione;
+    private String sezione;
     private Integer annoScolastico;
     private Integer giorniFrequentati;
     private Integer nrCompitiAssegnati;
@@ -16,10 +16,11 @@ public class Studente extends Persona {
     // variabili di CLASSE con "static" visibili da tutta la classe
     private static final int GIORNI_DI_SCUOLA = 240;
     private static final int GIORNI_ASSENZE_AMMESSI = 50;
-    private static Integer nrStudenti = 0;  // sarà assegnata alla variabile nrStudente per conteggiare gli studenti creati
+    private static Integer nrStudentiCreati = 1;  // sarà assegnata alla variabile nrStudente per conteggiare gli studenti creati
 
     /** Costruttore vuoto */
     public Studente() {
+        nrStudente = nrStudentiCreati++;
     }
 
     /**
@@ -34,7 +35,7 @@ public class Studente extends Persona {
      * @param nrCompitiSvolti       compiti svolti dallo Studente
      */
     public Studente(String nome, String cognome, int eta,
-                    Character sezione, Integer annoScolastico, Integer giorniFrequentati,
+                    String sezione, Integer annoScolastico, Integer giorniFrequentati,
                     Integer nrCompitiAssegnati, Integer nrCompitiSvolti) {
         super(nome, cognome, eta);
         this.sezione = sezione;
@@ -42,7 +43,7 @@ public class Studente extends Persona {
         this.giorniFrequentati = giorniFrequentati;
         this.nrCompitiAssegnati = nrCompitiAssegnati;
         this.nrCompitiSvolti = nrCompitiSvolti;
-        nrStudente = nrStudenti++;
+        nrStudente = nrStudentiCreati++;
     }
 
     /**
@@ -54,7 +55,7 @@ public class Studente extends Persona {
      */
     public Studente(String nome, String cognome, int eta) {
         super(nome, cognome, eta);
-        nrStudente = nrStudenti++;
+        nrStudente = nrStudentiCreati++;
     }
 
     /**
@@ -64,19 +65,19 @@ public class Studente extends Persona {
      * @param sezione        sezione a cui è iscritto
      * @param annoScolastico anno scolastico
      */
-    public Studente(String nome, Character sezione, Integer annoScolastico) {
+    public Studente(String nome, String sezione, Integer annoScolastico) {
         super(nome, null, null);
         this.sezione = sezione;
         this.annoScolastico = annoScolastico;
-        nrStudente = nrStudenti++;
+        nrStudente = nrStudentiCreati++;
     }
 
     /** getter e setter */
-    public Character getSezione() {
+    public String getSezione() {
         return sezione;
     }
 
-    public void setSezione(Character sezione) {
+    public void setSezione(String sezione) {
         this.sezione = sezione;
     }
 
@@ -120,27 +121,26 @@ public class Studente extends Persona {
         this.nrCompitiSvolti = nrCompitiSvolti;
     }
 
-    public static Integer getNrStudenti() {
-        return nrStudenti;
+    public static Integer getNrStudentiCreati() {
+        return nrStudentiCreati;
     }
 
-    public static void setNrStudenti(Integer nrStudenti) {
-        Studente.nrStudenti = nrStudenti;
+    public static void setNrStudentiCreati(Integer nrStudentiCreati) {
+        Studente.nrStudentiCreati = nrStudentiCreati;
     }
 
     @Override
     public String toString() {
-        return "Studente{" +
-                "nome='" + getNome() + '\'' +
-                ", cognome='" + getCognome() + '\'' +
-                ", eta=" + getEta() +
-                ", sezione=" + sezione +
-                ", annoScolastico=" + annoScolastico +
-                ", giorniFrequentati=" + giorniFrequentati +
-                ", nrCompitiAssegnati=" + nrCompitiAssegnati +
-                ", nrCompitiSvolti=" + nrCompitiSvolti +
-                ", Studente nr=" + nrStudente +
-                '}';
+        return "Studente:\n" +
+                "nome='" + getNome() + "\'\n" +
+                "cognome='" + getCognome() + "\'\n" +
+                "eta=" + getEta() + "\'\n" +
+                "sezione=" + sezione + "\'\n" +
+                "annoScolastico=" + annoScolastico + "\'\n" +
+                "giorniFrequentati=" + giorniFrequentati + "\'\n" +
+                "nrCompitiAssegnati=" + nrCompitiAssegnati + "\'\n" +
+                "nrCompitiSvolti=" + nrCompitiSvolti + "\'\n" +
+                "sudente nr° " + nrStudente;
     }
 
     /**

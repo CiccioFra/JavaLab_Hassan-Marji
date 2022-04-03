@@ -1,4 +1,4 @@
-package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola;
+package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola_v1;
 
 /**
  * @author Francesco Ribatti
