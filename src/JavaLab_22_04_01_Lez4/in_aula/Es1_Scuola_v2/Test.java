@@ -2,6 +2,8 @@ package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola_v2;
 
 import javax.swing.*;
 
+import static JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola_v2.PopolaScuola.popolaScuola;
+
 public class Test {
     public static void main(String[] args) {
         String[] elencoRuoliDisponibili = {"Studente", "Docente", "Bidello"};
@@ -20,7 +22,7 @@ public class Test {
                 testoSceltaRuolo, "Scegli il tuo ruolo", 3, null, elencoRuoliDisponibili, elencoRuoliDisponibili[0]);
 
         // crea l'oggetto Studente/Docente/Bidello dipendentemente dalla scelta dell'utente
-        popolaScuola(ruoloScelto);
+        PopolaScuola.popolaScuola(ruoloScelto);
 
         System.out.println();
         System.out.println("Scuola creata: " + nomeScuola);
@@ -36,7 +38,4 @@ public class Test {
         System.exit(0);
     }
 
-    // crea l'oggetto Studente/Docente/Bidello dipendentemente dalla scelta dell'utente
-    private static void popolaScuola(String ruoloScelto) {
-    }
 }

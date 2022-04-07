@@ -3,19 +3,19 @@ package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola_v2;
 import javax.swing.*;
 
 public class PopolaScuola {
-    public Persona popolaScuola(String ruoloScelto) {
+    public static Persona popolaScuola(String ruoloScelto) {
         Persona persona = null;
         switch (ruoloScelto) {
             case "Studente":
                 Studente studente = new Studente();
                 studente.setNome(JOptionPane.showInputDialog(null, "Inserire il nome dello studente"));
                 studente.setCognome(JOptionPane.showInputDialog(null, "Inserire il cognome dello studente"));
-                studente.setEta(Integer.parseInt(JOptionPane.showInputDialog(null, "Inserire l'età dello studente")));
+                studente.setEta(Integer.valueOf(JOptionPane.showInputDialog(null, "Inserire l'età dello studente")));
                 studente.setSezione(JOptionPane.showInputDialog(null, "Inserire la sezione del corso di studi dello studente"));
-                studente.setNome(JOptionPane.showInputDialog(null, "Inserire l'anno scolastico dello studente"));
-                studente.setNome(JOptionPane.showInputDialog(null, "Inserire quanti giorni di presenza ha lo studente (max240)"));
-                studente.setNome(JOptionPane.showInputDialog(null, "Inserire quanti compiti sono stati assegnati allo studente"));
-                studente.setNome(JOptionPane.showInputDialog(null, "Inserire quanti compiti ha svolto lo studente"));
+                studente.setAnnoScolastico(Integer.parseInt(JOptionPane.showInputDialog(null, "Inserire l'anno scolastico dello studente")));
+                studente.setGiorniFrequentati(Integer.parseInt(JOptionPane.showInputDialog(null, "Inserire quanti giorni di presenza ha lo studente (max240)")));
+                studente.setNrCompitiAssegnati(Integer.parseInt(JOptionPane.showInputDialog(null, "Inserire quanti compiti sono stati assegnati allo studente")));
+                studente.setNrCompitiSvolti(Integer.parseInt(JOptionPane.showInputDialog(null, "Inserire quanti compiti ha svolto lo studente")));
                 System.out.println(studente);
                 JOptionPane.showMessageDialog(null, studente, "scheda dello studente " + studente.getNome(), -1);
                 persona = studente;

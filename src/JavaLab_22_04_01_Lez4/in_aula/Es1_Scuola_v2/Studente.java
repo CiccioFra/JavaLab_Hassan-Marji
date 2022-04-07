@@ -16,7 +16,7 @@ public class Studente extends Persona {
     // variabili di CLASSE con "static" visibili da tutta la classe
     private static final int GIORNI_DI_SCUOLA = 240;
     private static final int GIORNI_ASSENZE_AMMESSI = 50;
-    private static Integer nrStudentiCreati = 1;  // sarà assegnata alla variabile nrStudente per conteggiare gli studenti creati
+    private static Integer nrStudentiCreati = 0;  // sarà assegnata alla variabile nrStudente per conteggiare gli studenti creati
 
     /** Costruttore vuoto */
     public Studente() {
@@ -97,14 +97,6 @@ public class Studente extends Persona {
         this.giorniFrequentati = giorniFrequentati;
     }
 
-    public int getGIORNI_DI_SCUOLA() {
-        return GIORNI_DI_SCUOLA;
-    }
-
-    public int getGIORNI_ASSENZE_AMMESSI() {
-        return GIORNI_ASSENZE_AMMESSI;
-    }
-
     public Integer getNrCompitiAssegnati() {
         return nrCompitiAssegnati;
     }
@@ -121,6 +113,14 @@ public class Studente extends Persona {
         this.nrCompitiSvolti = nrCompitiSvolti;
     }
 
+    public Integer getNrStudente() {
+        return nrStudente;
+    }
+
+    public void setNrStudente(Integer nrStudente) {
+        this.nrStudente = nrStudente;
+    }
+
     public static Integer getNrStudentiCreati() {
         return nrStudentiCreati;
     }
@@ -128,6 +128,8 @@ public class Studente extends Persona {
     public static void setNrStudentiCreati(Integer nrStudentiCreati) {
         Studente.nrStudentiCreati = nrStudentiCreati;
     }
+
+
 
     @Override
     public String toString() {
