@@ -1,1 +1,3 @@
 Posso estendere una classe non appartenente al package?
+
+stor presidius -> stantme

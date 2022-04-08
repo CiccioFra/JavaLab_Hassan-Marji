@@ -1,0 +1,5 @@
+-   arrayList   // negli array viene allocata in memoria in modalità sequenziale
+array primitivi si usano per piccole operazioni
+ovviano al problema di staticità del array primitivo
+
+- List<Tipo> nome = new ArrayList<>();

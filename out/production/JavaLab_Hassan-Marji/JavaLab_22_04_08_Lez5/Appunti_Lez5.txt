@@ -1,0 +1,24 @@
+-   HASHMAP
+    -   struttura dati {key => value}   [per la ricerca: tempo di retrive (in computazione - in termini di complessità - è chiamato o(1)]
+        mappa il valore di una key, associando un determinato value
+    -   Si basa, ed implementa l'interfaccia Map<K, V> ereditando la classe astratta AbstractMap<K, V>.
+    -   Il Tipo della chiave e del Valore vengono scelti dal programmatore, e non necessariamente devono essere uguali.
+
+    -   Es. 1   Map<K, V> nomeMappa = new HashMap<>();
+    -   Es. 2   HashMap<K, V> nomeMappa = new HashMap<>();
+
+-   Iterazioni sulle HashMap    --> foreach
+    -   sulle chiavi: utilizzo il metodo .keySet() di Map -> estrae valore della chiave
+        -   sulle chiavi: utilizzo il metodo .keySet() appartenente alle mappe
+            -   il metodo permette di estrarre ed allo stesso tempo ottenere i valori delle chiavi,
+                e conseguente (possibile ottenimento dei valori associati
+            -   il metodo .get("chiave")    estrae il valore associato alla chiave
+                -   es.2    for(String key : mappa.keySet())  {
+                                System.out.print(key + " " + mappa.get(key));  }
+                -   es.2: Lamda-notation
+                    2a)     mappa.forEach((key, value) ->    {  System.out.print(key + " " + mappa.get(key));  }
+                    2b)     mappa.keySet().forEach(key ->    {  System.out.print(key + " " + mappa.get(key));  });
+
+    -   sui valori: utilizzo il metodo .values() per ottenere SOLAMENTE i valori consecutivi della mia mappa
+        -   for(Tipo item : mappa.values())  {
+                System.out.print(key + " " + mappa.get(key));  }
