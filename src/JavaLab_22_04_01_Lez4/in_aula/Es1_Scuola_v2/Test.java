@@ -21,7 +21,9 @@ public class Test {
         String ruoloScelto = (String) JOptionPane.showInputDialog(null,
                 testoSceltaRuolo, "Scegli il tuo ruolo", 3, null, elencoRuoliDisponibili, elencoRuoliDisponibili[0]);
 
-        // crea l'oggetto Studente/Docente/Bidello dipendentemente dalla scelta dell'utente
+        /**
+         *  crea l'oggetto Studente/Docente/Bidello dipendentemente dalla scelta dell'utente
+        */
         PopolaScuola.popolaScuola(ruoloScelto);
 
         System.out.println();

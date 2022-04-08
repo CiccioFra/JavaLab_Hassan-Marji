@@ -4,7 +4,7 @@ public class Test {
     public static void main(String[] args) {
         Rettangolo rettangolo = new Rettangolo(4, 2);
         System.out.println(rettangolo.area(3,3));
-        System.out.println(rettangolo.perimetro());
+        //System.out.println(rettangolo.perimetro());
 
 
         Quadrato quadrato = new Quadrato(4,10);

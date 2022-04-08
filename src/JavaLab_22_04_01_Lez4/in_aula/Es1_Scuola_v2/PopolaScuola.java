@@ -4,13 +4,14 @@ import javax.swing.*;
 
 /**
  * @author Francesco Ribatti
- * Classe per generare persone speciche
+ * Classe per generare personale scolastico
  */
 public class PopolaScuola {
     /**
-     *
-     * @param ruoloScelto   ruolo della persona da creare
-     * @return  la persona nel ruolo scelta
+     * Creazione di un Studente/Docente/Bidello
+     * Il metodo chiede all'utente di inserire valori attributo
+     * @param ruoloScelto immettere il tipo di personaggio da creare
+     * @return persona dettagliata dall'utente
      */
     public static Persona popolaScuola(String ruoloScelto) {
         Persona persona = null;
