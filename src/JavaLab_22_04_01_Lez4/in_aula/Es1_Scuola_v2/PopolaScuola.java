@@ -2,7 +2,16 @@ package JavaLab_22_04_01_Lez4.in_aula.Es1_Scuola_v2;
 
 import javax.swing.*;
 
+/**
+ * @author Francesco Ribatti
+ * Classe per generare persone speciche
+ */
 public class PopolaScuola {
+    /**
+     *
+     * @param ruoloScelto   ruolo della persona da creare
+     * @return  la persona nel ruolo scelta
+     */
     public static Persona popolaScuola(String ruoloScelto) {
         Persona persona = null;
         switch (ruoloScelto) {
