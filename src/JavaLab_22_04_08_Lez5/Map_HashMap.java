@@ -5,5 +5,5 @@ import java.util.Map;
 
 public class Map_HashMap {
     Map<String, String> nomeMappa1 = new HashMap<>();
-    HashMap<String, int> nomeMappa2 = new HashMap();
+    HashMap<String, String> nomeMappa2 = new HashMap();
 }
